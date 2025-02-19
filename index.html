@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>俄罗斯方块</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="game-container">
+        <div class="game-header">
+            <h1>俄罗斯方块</h1>
+            <div class="game-info">
+                <div class="score">分数: <span id="score">0</span></div>
+                <div class="level">等级: <span id="level">1</span></div>
+                <div class="lines">消除行数: <span id="lines">0</span></div>
+            </div>
+            <div class="controls">
+                <select id="difficulty">
+                    <option value="easy">简单</option>
+                    <option value="medium">中等</option>
+                    <option value="hard">困难</option>
+                </select>
+                <button id="start-btn">开始游戏</button>
+                <button id="pause-btn">暂停</button>
+                <div class="music-control">
+                    <button id="music-btn">音乐: 开</button>
+                    <input type="range" id="volume" min="0" max="100" value="50">
+                </div>
+            </div>
+        </div>
+        <div class="game-main">
+            <canvas id="game-canvas"></canvas>
+            <div class="next-piece">
+                <h3>下一个方块</h3>
+                <canvas id="next-canvas"></canvas>
+            </div>
+        </div>
+        <div class="mobile-controls">
+            <button id="left-btn">←</button>
+            <button id="right-btn">→</button>
+            <button id="rotate-btn">旋转</button>
+            <button id="down-btn">↓</button>
+        </div>
+    </div>
+    <audio id="bgm" loop>
+        <source src="music.mp3" type="audio/mp3">
+    </audio>
+    <script src="game.js"></script>
+</body>
+</html>

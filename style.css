@@ -1,0 +1,157 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f0f0f0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    padding: 20px;
+}
+
+.game-container {
+    background-color: white;
+    border-radius: 10px;
+    box-shadow: 0 0 20px rgba(0, 0, 0, 0.1);
+    padding: 20px;
+    max-width: 800px;
+    width: 100%;
+}
+
+.game-header {
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+.game-header h1 {
+    color: #333;
+    margin-bottom: 15px;
+}
+
+.game-info {
+    display: flex;
+    justify-content: space-around;
+    margin-bottom: 15px;
+}
+
+.controls {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10px;
+    justify-content: center;
+    align-items: center;
+    margin-bottom: 20px;
+}
+
+button, select {
+    padding: 8px 16px;
+    border: none;
+    border-radius: 5px;
+    background-color: #4CAF50;
+    color: white;
+    cursor: pointer;
+    font-size: 14px;
+    transition: background-color 0.3s;
+}
+
+button:hover {
+    background-color: #45a049;
+}
+
+#pause-btn {
+    background-color: #ff9800;
+}
+
+#pause-btn:hover {
+    background-color: #f57c00;
+}
+
+.music-control {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+#volume {
+    width: 100px;
+}
+
+.game-main {
+    display: flex;
+    gap: 20px;
+    justify-content: center;
+    flex-wrap: wrap;
+}
+
+#game-canvas {
+    border: 2px solid #333;
+    background-color: #000;
+}
+
+.next-piece {
+    text-align: center;
+}
+
+#next-canvas {
+    border: 1px solid #333;
+    background-color: #000;
+    margin-top: 10px;
+}
+
+.mobile-controls {
+    display: none;
+    gap: 15px;
+    justify-content: center;
+    margin-top: 20px;
+    flex-wrap: wrap;
+    padding: 10px;
+}
+
+.mobile-controls button {
+    width: 70px;
+    height: 70px;
+    font-size: 28px;
+    padding: 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: rgba(76, 175, 80, 0.8);
+    border-radius: 50%;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    transition: transform 0.1s, background-color 0.3s;
+    -webkit-tap-highlight-color: transparent;
+}
+
+.mobile-controls button:active {
+    transform: scale(0.95);
+    background-color: rgba(69, 160, 73, 0.9);
+}
+
+@media (max-width: 768px) {
+    .game-container {
+        padding: 10px;
+    }
+
+    .game-info {
+        flex-direction: column;
+        gap: 10px;
+    }
+
+    .controls {
+        flex-direction: column;
+    }
+
+    .mobile-controls {
+        display: flex;
+    }
+
+    #game-canvas {
+        max-width: 100%;
+        height: auto;
+    }
+}
